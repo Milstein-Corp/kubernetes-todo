@@ -11,18 +11,19 @@ spec:
       labels:
         app: postgres
     spec:
+      restartPolicy: Always
       containers:
       - name: postgres
-        image: nihatcan17/postgres1:0
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+        image: nihatcan17/postgres:1.0
         ports:
         - containerPort: 5432
-        envFrom:
-          - secretRef:
-              name: postgres-secret
+        env:
+          - name: POSTGRES_PASSWORD
+            value: Pp123456789
+          - name: POSTGRES_USER
+            value: postgres
+          - name: POSTGRES_DB
+            value: clarustodo
         volumeMounts:
           - name: postgres-pv
             mountPath: /var/lib/postgresql/data

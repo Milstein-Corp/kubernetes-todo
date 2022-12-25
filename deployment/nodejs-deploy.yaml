@@ -12,12 +12,9 @@ spec:
       labels:
         app: nodejs
     spec:
+      restartPolicy: Always
       containers:
       - name: nodejs
         image: nihatcan17/nodejs:1.0
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 5000

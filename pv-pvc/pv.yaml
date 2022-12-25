@@ -9,4 +9,4 @@ spec:
     - ReadWriteOnce
   storageClassName: manual
   hostPath:
-    path: "/home/ec2-user/postgres"
+    path: "/home/ubuntu/postgres"

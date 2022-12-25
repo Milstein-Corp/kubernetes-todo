@@ -16,9 +16,5 @@ spec:
       containers:
       - name: react
         image: nihatcan17/react:1.0
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 3000
