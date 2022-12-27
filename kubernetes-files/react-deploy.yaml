@@ -15,6 +15,6 @@ spec:
       restartPolicy: Always
       containers:
       - name: react
-        image: nihatcan17/react:1.0
+        image: react:1.0
         ports:
         - containerPort: 3000

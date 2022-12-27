@@ -14,16 +14,15 @@ spec:
       restartPolicy: Always
       containers:
       - name: postgres
-        image: nihatcan17/postgres:1.0
+        image: postgres:1.0
         ports:
         - containerPort: 5432
         env:
           - name: POSTGRES_PASSWORD
-            value: Pp123456789
-          - name: POSTGRES_USER
-            value: postgres
-          - name: POSTGRES_DB
-            value: clarustodo
+            valueFrom:
+              secretKeyRef:
+                name: postgres-secret
+                key: password
         volumeMounts:
           - name: postgres-pv
             mountPath: /var/lib/postgresql/data
