@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import "./style.css";
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACTURL;
 
 console.log(BASE_URL);
 

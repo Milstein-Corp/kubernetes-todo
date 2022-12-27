@@ -14,7 +14,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: postgres
-        image: postgres:1.0
+        image: nihatcan17/postgres:1.0
         ports:
         - containerPort: 5432
         env:
