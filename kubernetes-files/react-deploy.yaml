@@ -20,4 +20,4 @@ spec:
         - containerPort: 3000
         env:
           - name: REACT_APP_BASE_URL
-            value: postgres-service.default.svc.cluster.local
+            value: nodejs-service.default.svc.cluster.local
