@@ -100,10 +100,6 @@ data "template_file" "worker" {
 
 data "template_file" "master" {
   template = file("master.sh")
-  vars = {
-    public-ip = aws_instance.master.public_ip
-    private-ip = aws_instance.master.private_ip
-  }
 }
 
 resource "aws_security_group" "tf-k8s-master-sec-gr" {

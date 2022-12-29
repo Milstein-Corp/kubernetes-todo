@@ -40,6 +40,5 @@ mkdir -p /home/ubuntu/.kube
 cp -i /etc/kubernetes/admin.conf /home/ubuntu/.kube/config
 chown ubuntu:ubuntu /home/ubuntu/.kube/config
 su - ubuntu -c 'kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml'
-git clone https://github.com/Nihatcan17/kubernetes-todo.git
 cd /home/ubuntu
 su - ubuntu -c 'kubectl apply -f .'
