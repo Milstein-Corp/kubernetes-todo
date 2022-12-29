@@ -15,9 +15,6 @@ spec:
       restartPolicy: Always
       containers:
       - name: react
-        image: nihatcan17/react:1.0
+        image: nihatcan17/react:10.0
         ports:
         - containerPort: 3000
-        env:
-          - name: REACT_APP_BASE_URL
-            value: nodejs-service.default.svc.cluster.local
