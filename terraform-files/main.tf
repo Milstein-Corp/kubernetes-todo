@@ -152,8 +152,8 @@ resource "aws_security_group" "tf-k8s-master-sec-gr" {
 }
 
 
-output "ip" {
-  value = "${aws_instance.master.public_ip}:3000"
+output "url" {
+  value = "http://${aws_instance.master.public_ip}:30003"
 }
 
 

@@ -2,6 +2,7 @@
 apt-get update -y
 apt-get upgrade -y
 apt-get install git -y
+cd /home/ubuntu
 git clone https://github.com/Nihatcan17/kubernetes-todo.git
 cd /home/ubuntu/kubernetes-todo/kubernetes-files
 mv *.yaml /home/ubuntu/

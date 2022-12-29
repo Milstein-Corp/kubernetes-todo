@@ -1,2 +1,2 @@
-key = "nihat"  # your key is written here !!
-tag = "firstkey"  # your tag is written here !!
+key = ""  # your key is written here !!
+tag = ""  # your tag is written here !!
