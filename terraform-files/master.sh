@@ -2,6 +2,9 @@
 apt-get update -y
 apt-get upgrade -y
 apt-get install git -y
+git clone https://github.com/Nihatcan17/kubernetes-todo.git
+cd /home/ubuntu/kubernetes-todo/kubernetes-files
+mv *.yaml /home/ubuntu/
 hostnamectl set-hostname kube-master
 chmod 777 /etc/sysctl.conf
 echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
@@ -38,12 +41,5 @@ cp -i /etc/kubernetes/admin.conf /home/ubuntu/.kube/config
 chown ubuntu:ubuntu /home/ubuntu/.kube/config
 su - ubuntu -c 'kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml'
 git clone https://github.com/Nihatcan17/kubernetes-todo.git
-cd /home/ubuntu/kubernetes-todo/docker-files/client
-sed -i "s/'publicipwrittenhere'/${public-ip}/g" .env
-cd /home/ec2-user/kubernetes-todo/docker-files/server
-sed -i "s/'privateipwrittenhere'/${private-ip}/g" .env
-docker build -t "postgres:1.0" /home/ubuntu/kubernetes-todo/docker-files/postgres
-docker build -t "nodejs:1.0" /home/ubuntu/kubernetes-todo/docker-files/server
-docker build -t "react:1.0" /home/ubuntu/kubernetes-todo/docker-files/client
-cd /home/ubuntu/kubernetes-todo/kubernetes-files
+cd /home/ubuntu
 su - ubuntu -c 'kubectl apply -f .'
